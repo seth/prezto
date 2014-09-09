@@ -17,10 +17,10 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='emacsclient -nw'
+export VISUAL='emacsclient -nw'
 export PAGER='less'
-
+export DELIVERY_SSH_PUB_KEY=~/.ssh/sfalcon.pub
 #
 # Language
 #
@@ -41,11 +41,27 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  ~/bin 
+  ~/Erlang/17.0/bin 
+  ~/oc/code/opscode/concrete 
+  /usr/local/bin 
+  /usr/local/sbin 
+  /Applications/Emacs.app/Contents/MacOS/bin 
+  /usr/local/share/python 
+  /usr/local/Cellar/python/2.7.2/bin 
+  /usr/local/texlive/2007/bin/i386-darwin 
+  /usr/texbin 
+  $JAVA_HOME   
   $path
 )
+
+source /usr/local/share/chruby/chruby.sh
+chruby 2.1.2
 
 #
 # Less
@@ -72,3 +88,21 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+if [[ ! -d "$TMPPREFIX" ]]; then
+  mkdir -p "$TMPPREFIX"
+fi
+
+/usr/local/bin/keychain -Q -q opscode-platform-20100217 \
+                              opscode-preprod-20101208 \
+                              sfalcon \
+                              sf_github
+
+if [[ -f ~/.keychain/$HOST-sh ]]; then
+    source "$HOME/.keychain/$HOST-sh"
+fi
+
+if [[ -f ~/.keychain/$HOST-sh-gpg ]]; then
+    source "$HOME/.keychain/$HOST-sh-gpg"
+fi
+
