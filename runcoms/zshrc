@@ -11,3 +11,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+alias cdeliv='cd ~/oc/code/opscode/delivery'
+alias cod='cd ~/oc/code/opscode/omnibus-delivery'
+alias cweb='cd ~/oc/code/opscode/delivery-web'
+alias ecn='emacsclient -n'
+alias e='emacsclient -n'
+alias en='emacsclient -nw'
+
