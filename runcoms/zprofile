@@ -56,12 +56,18 @@ path=(
   /usr/local/Cellar/python/2.7.2/bin 
   /usr/local/texlive/2007/bin/i386-darwin 
   /usr/texbin 
-  $JAVA_HOME   
+  $JAVA_HOME
+  /usr/local/opt/go/libexec/bin
   $path
 )
 
-source /usr/local/share/chruby/chruby.sh
-chruby 2.1.2
+export GOPATH=/Users/seth/src/godev
+export GOBIN=/Users/seth/src/godev/bin
+##export GOROOT=/Users/seth/src/godev/bin
+
+# source /usr/local/share/chruby/chruby.sh
+# chruby 2.1.2
+eval "$(chef shell-init zsh)"
 
 #
 # Less

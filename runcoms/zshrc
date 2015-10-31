@@ -13,9 +13,13 @@ fi
 # Customize to your needs...
 
 alias cdeliv='cd ~/oc/code/opscode/delivery'
+alias ccli='cd ~/oc/code/opscode/delivery-cli'
 alias cod='cd ~/oc/code/opscode/omnibus-delivery'
 alias cweb='cd ~/oc/code/opscode/delivery-web'
 alias ecn='emacsclient -n'
 alias e='emacsclient -n'
 alias en='emacsclient -nw'
+
+PERL_MB_OPT="--install_base \"/Users/seth/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/seth/perl5"; export PERL_MM_OPT;
 
