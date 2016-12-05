@@ -109,6 +109,6 @@ if [[ -f ~/.keychain/$HOST-sh-gpg ]]; then
     source "$HOME/.keychain/$HOST-sh-gpg"
 fi
 
-export HOMEBREW_GITHUB_API_TOKEN=230e400bba6fa3ed0ace0162366e1301e89f079a
+source "$HOME/.zprezto/runcoms/secrets"
 
 source "$HOME/.zprezto/runcoms/chef-shell-init"
