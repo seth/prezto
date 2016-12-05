@@ -19,6 +19,9 @@ alias cweb='cd ~/oc/code/opscode/delivery-web'
 alias ecn='emacsclient -n'
 alias e='emacsclient -n'
 alias en='emacsclient -nw'
+# alias hab_vm='docker-machine create -d vmwarefusion --vmwarefusion-memory-size 8000 --vmwarefusion-cpu-count 4 --vmwarefusion-disk-size 4000 default; eval $(docker-machine env default)'
+# alias hab_vm_create='docker-machine create -d virtualbox --virtualbox-memory "8000" --virtualbox-cpu-count "4" --virtualbox-disk-size "4000" default'
+# alias hab_vm_setup='eval $(docker-machine env default)'
 
 PERL_MB_OPT="--install_base \"/Users/seth/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/seth/perl5"; export PERL_MM_OPT;

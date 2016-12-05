@@ -1,4 +1,4 @@
-export PATH="/opt/chefdk/bin:/Users/seth/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/opt/chefdk/bin:/Users/seth/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/Users/seth/perl5/bin:/Users/seth/.nvm/v0.10.35/bin:/opt/delivery-cli/bin:/usr/local/bin:/usr/local/sbin:/Users/seth/bin:/Users/seth/perl5/bin:/Users/seth/oc/code/opscode/concrete:/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin:/System/Library/Frameworks/JavaVM.framework/Home:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/chefdk/bin:/Users/seth/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/opt/chefdk/bin:/Users/seth/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:$PATH"
 export GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.1.0"
 export GEM_HOME="/Users/seth/.chefdk/gem/ruby/2.1.0"
 export GEM_PATH="/Users/seth/.chefdk/gem/ruby/2.1.0:/opt/chefdk/embedded/lib/ruby/gems/2.1.0"

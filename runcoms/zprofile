@@ -53,6 +53,7 @@ path=(
   /usr/local/bin 
   /usr/local/sbin
   /opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin
+  /usr/local/texlive/2015basic/bin/x86_64-darwin
   $JAVA_HOME
   $path
 )
@@ -98,10 +99,7 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
-/usr/local/bin/keychain -Q -q opscode-platform-20100217 \
-                              opscode-preprod-20101208 \
-                              sfalcon \
-                              sf_github
+/usr/local/bin/keychain -Q -q sfalcon sf_github
 
 if [[ -f ~/.keychain/$HOST-sh ]]; then
     source "$HOME/.keychain/$HOST-sh"
